@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "A SRI VALLABHA",
+        "address":"Tirupati",
+        "phoneNumber":"9182714677",
+        "email":"asrivallabha010@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "A SRI VALLABHA",
+        "address":"Hyderabad",
+        "phoneNumber":"9542917961",
+        "email":"asrivallabha010@gmail.com"
+    }
+]
