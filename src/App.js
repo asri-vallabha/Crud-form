@@ -1,9 +1,10 @@
 import React from 'react'
 import Container from './Container'
+import './App.css'
 
 function App(props) {
   return (
-    <div>
+    <div className='app'>
       <Container/>
     </div>
     

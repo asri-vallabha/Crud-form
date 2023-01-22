@@ -1,6 +1,5 @@
 import React from 'react'
 import EditPerson from './EditPerson'
-
 function Details(props) {
     const{id,firstName,lastName,email,loca,removeItem,editItem}=props
     const [toggle,setToggle]=React.useState(false)
@@ -29,11 +28,14 @@ function Details(props) {
           loca={loca} 
           editItem={editItem}
           handleToggle={handleToggle}/>
-          <button onClick={handleToggle}>Cancel</button>
+          <center>
+          <button onClick={handleToggle} className="btn btn-warning">Cancel</button>
+          </center>
+          
         </div>
       ):(
-        <div>
-          <table border='1'>
+        <div className='details'>
+          <table class=" table table-danger">
           <thead>
             <tr>
               <th>First Name</th>
@@ -54,10 +56,10 @@ function Details(props) {
             {/* <td>{}</td>
             <td>{}</td> */}
             <td>{loca}</td>
-            <td><button onClick={handleToggle}>Edit</button></td>
+            <td><button onClick={handleToggle} class="btn btn-warning">Edit</button></td>
             <td><button onClick={()=>{
               handleRemove(id)
-            }}>Delete</button></td>
+            }} class="btn btn-danger">Delete</button></td>
             </tr>
             
           </tbody>

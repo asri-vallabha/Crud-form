@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: flex-start;
+    align-self:initial
+}
+.right-item{
+
+}
+.h1{
+    text-shadow: 10px;
+    text-decoration-color: brown;
+    text-decoration-line: inherit;
+}
+.left-item{
+    padding-right: 0%;
+}

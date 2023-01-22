@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import AddPerson from './AddPerson'
 import PersonsList from './PersonsList'
+import './Container.css'
 
 
 function Container(props) {
@@ -34,10 +35,20 @@ function Container(props) {
   },[persons])
   console.log(persons)
   return (
-    <div>
-      <h1>Peoples DashBoard</h1>
+    <div className='container'>
+      
+      <div className='right-item'>
       <AddPerson addItem={addItem}/>
-      <PersonsList persons={persons} removeItem={removeItem} EditItem={EditItem}/> *
+      </div>
+      <div className='left-item'>
+        <div className='h1'>
+        <center><h1>Peoples DashBoard</h1></center>
+        </div>
+      
+      <PersonsList persons={persons} removeItem={removeItem} EditItem={EditItem}/>
+      </div>
+      
+      
     </div>
   )
 }

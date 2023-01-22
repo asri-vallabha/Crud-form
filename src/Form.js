@@ -1,5 +1,6 @@
 import React from 'react'
 import {v4 as uuidv4} from 'uuid'
+import './formInput.css'
 
 function Form(props) {
     const{formSubmit,handleToggle,id:slNo,firstName:fName,lastName:lName,email:eMail,loca:lOca}=props
@@ -70,26 +71,22 @@ function Form(props) {
     }
     
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <h1>Fill the Form for registration</h1>
-            <lable>First Name</lable><br/>
-            <input type='text' value={firstName} name='firstName' placeholder='First Name' onChange={handleChangeFname}/><br/>
-            <label> Last Name</label><br/>
-            <input type='text' value={lastName} name='lastName' placeholder='Last Name' onChange={handleChangeLname}/><br/>
-            <label>Email Id</label><br/>
-            <input type='email' value={email} name='email' placeholder='abcd@gmail.com' onChange={handleChangeEmail}/><br/>
-            {/*<label>Gender</label><br/>
-             <input type='radio' value='Male' onChange={handleChangeMale}/>Male 
-            <input type='radio' value='Female' onChange={handleChangeFemale}/>Female
-            <input type='radio' value='Transgender' onChange={handleChangeTrans}/>Transgender<br/>
-            <label>Date of Birth</label><br/>
-            <input type='date' name='date' onChange={handleChangeDate}/><br/>
-            */}
-            <label>Location</label><br/>
-            <input type='text' value={loca} placeholder='ex:Tirupati' onChange={handleChangeLoca}/><br/>
-            <input type='submit' value='Register'/>
-            <hr/>
+    <div class='formInput'>
+        <form onSubmit={handleSubmit} className='form'>
+            <h1>Register</h1>
+            <input  type='text' value={firstName}
+             name='firstName' placeholder='First Name' onChange={handleChangeFname}/>
+
+            <input  type='text' value={lastName} 
+            name='lastName' placeholder='Last Name' onChange={handleChangeLname}/>
+
+            <input type='email' value={email} 
+            name='email' placeholder='abcd@gmail.com' onChange={handleChangeEmail}/>
+
+            <input  type='text' value={loca}
+             placeholder='ex:Tirupati' onChange={handleChangeLoca}/>
+             
+            <input  class="btn btn-primary" type='submit' value='Register'/> 
         </form>
       
     </div>
@@ -108,3 +105,10 @@ export default Form
             <input type='date'/><br/>
 
 */
+{/*<label>Gender</label><br/>
+             <input type='radio' value='Male' onChange={handleChangeMale}/>Male 
+            <input type='radio' value='Female' onChange={handleChangeFemale}/>Female
+            <input type='radio' value='Transgender' onChange={handleChangeTrans}/>Transgender<br/>
+            <label>Date of Birth</label><br/>
+            <input type='date' name='date' onChange={handleChangeDate}/><br/>
+            */}
